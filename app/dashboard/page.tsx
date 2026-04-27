@@ -1,4 +1,11 @@
+"use client";
+
+import { useHandover } from "../context/HandoverContext";   // ✅ REQUIRED ADDITION
+
 export default function WardDashboard() {
+
+  const { summaries } = useHandover();                      // ✅ REQUIRED ADDITION
+
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
 
@@ -80,11 +87,24 @@ export default function WardDashboard() {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td className="p-3 text-gray-500 italic" colSpan={6}>
-                    No patients recorded yet.
-                  </td>
-                </tr>
+                {summaries.length === 0 ? (
+                  <tr>
+                    <td className="p-3 text-gray-500 italic" colSpan={6}>
+                      No patients recorded yet.
+                    </td>
+                  </tr>
+                ) : (
+                  summaries.map((entry, i) => (
+                    <tr key={i}>
+                      <td className="p-3">{entry.patientName}</td>
+                      <td className="p-3">{entry.bedNumber}</td>
+                      <td className="p-3">{entry.riskLevel}</td>
+                      <td className="p-3">{entry.keyChanges}</td>
+                      <td className="p-3">{entry.tasks}</td>
+                      <td className="p-3">{entry.shift}</td>
+                    </tr>
+                  ))
+                )}
               </tbody>
             </table>
           </div>
