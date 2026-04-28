@@ -139,10 +139,10 @@ export default function HandoverPage() {
 
         {/* # RECENT */}
 <section>
-  <h2 className="text-lg font-semibold text-gray-800 mb-3">Recent Summaries</h2>
+  <h2 className="text-lg font-semibold text-black">Recent Summaries</h2>
 
   {summaries.length === 0 ? (
-    <p className="text-gray-700 italic">No entries yet.</p>
+    <p className="text-black italic">No entries yet.</p>
   ) : (
     summaries.map((entry, i) => (
       <div key={i} className="bg-white p-4 rounded-lg border shadow-sm mb-3">
