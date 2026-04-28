@@ -68,28 +68,26 @@ export default function HandoverPage() {
           <h2 className="text-lg font-semibold text-gray-800">New Entry</h2>
 
           <input
-            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-black"
+            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-gray-800"
             placeholder="Your name..."
             value={nurseName}
             onChange={(e) => setNurseName(e.target.value)}
           />
-
           <input
-            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-black"
+            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-gray-800"
             placeholder="Patient name..."
             value={patientName}
             onChange={(e) => setPatientName(e.target.value)}
           />
-
           <input
-            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-black"
+            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-gray-800"
             placeholder="Bed number..."
             value={bedNumber}
             onChange={(e) => setBedNumber(e.target.value)}
           />
 
           <select
-            className="w-full border p-2 rounded-md text-black"
+            className="w-full border p-2 rounded-md text-gray-800"
             value={riskLevel}
             onChange={(e) => setRiskLevel(e.target.value)}
           >
@@ -100,23 +98,21 @@ export default function HandoverPage() {
           </select>
 
           <textarea
-            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-black"
+            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-gray-800"
             rows={2}
             placeholder="Key changes..."
             value={keyChanges}
             onChange={(e) => setKeyChanges(e.target.value)}
           />
-
           <textarea
-            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-black"
+            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-gray-800"
             rows={3}
             placeholder="SBAR summary..."
             value={sbar}
             onChange={(e) => setSbar(e.target.value)}
           />
-
           <textarea
-            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-black"
+            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-gray-800"
             rows={2}
             placeholder="Outstanding tasks..."
             value={tasks}
@@ -124,7 +120,7 @@ export default function HandoverPage() {
           />
 
           <select
-            className="w-full border p-2 rounded-md text-black"
+            className="w-full border p-2 rounded-md text-gray-800"
             value={shift}
             onChange={(e) => setShift(e.target.value)}
           >
