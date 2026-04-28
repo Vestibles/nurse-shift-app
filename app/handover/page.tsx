@@ -67,28 +67,76 @@ export default function HandoverPage() {
 
           <h2 className="text-lg font-semibold text-gray-800">New Entry</h2>
 
-          <input className="w-full border p-2 rounded-md" placeholder="Your name..." value={nurseName} onChange={(e) => setNurseName(e.target.value)} />
-          <input className="w-full border p-2 rounded-md" placeholder="Patient name..." value={patientName} onChange={(e) => setPatientName(e.target.value)} />
-          <input className="w-full border p-2 rounded-md" placeholder="Bed number..." value={bedNumber} onChange={(e) => setBedNumber(e.target.value)} />
+          <input
+            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-black"
+            placeholder="Your name..."
+            value={nurseName}
+            onChange={(e) => setNurseName(e.target.value)}
+          />
 
-          <select className="w-full border p-2 rounded-md" value={riskLevel} onChange={(e) => setRiskLevel(e.target.value)}>
+          <input
+            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-black"
+            placeholder="Patient name..."
+            value={patientName}
+            onChange={(e) => setPatientName(e.target.value)}
+          />
+
+          <input
+            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-black"
+            placeholder="Bed number..."
+            value={bedNumber}
+            onChange={(e) => setBedNumber(e.target.value)}
+          />
+
+          <select
+            className="w-full border p-2 rounded-md text-black"
+            value={riskLevel}
+            onChange={(e) => setRiskLevel(e.target.value)}
+          >
             <option value="">Select risk level...</option>
             <option>High</option>
             <option>Medium</option>
             <option>Low</option>
           </select>
 
-          <textarea className="w-full border p-2 rounded-md" rows={2} placeholder="Key changes..." value={keyChanges} onChange={(e) => setKeyChanges(e.target.value)} />
-          <textarea className="w-full border p-2 rounded-md" rows={3} placeholder="SBAR summary..." value={sbar} onChange={(e) => setSbar(e.target.value)} />
-          <textarea className="w-full border p-2 rounded-md" rows={2} placeholder="Outstanding tasks..." value={tasks} onChange={(e) => setTasks(e.target.value)} />
+          <textarea
+            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-black"
+            rows={2}
+            placeholder="Key changes..."
+            value={keyChanges}
+            onChange={(e) => setKeyChanges(e.target.value)}
+          />
 
-          <select className="w-full border p-2 rounded-md" value={shift} onChange={(e) => setShift(e.target.value)}>
+          <textarea
+            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-black"
+            rows={3}
+            placeholder="SBAR summary..."
+            value={sbar}
+            onChange={(e) => setSbar(e.target.value)}
+          />
+
+          <textarea
+            className="w-full border p-2 rounded-md placeholder:text-gray-700 text-black"
+            rows={2}
+            placeholder="Outstanding tasks..."
+            value={tasks}
+            onChange={(e) => setTasks(e.target.value)}
+          />
+
+          <select
+            className="w-full border p-2 rounded-md text-black"
+            value={shift}
+            onChange={(e) => setShift(e.target.value)}
+          >
             <option value="">Select shift...</option>
             <option>Day</option>
             <option>Night</option>
           </select>
 
-          <button onClick={handleSaveSummary} className="w-full bg-blue-700 text-white py-3 rounded-md hover:bg-blue-800">
+          <button
+            onClick={handleSaveSummary}
+            className="w-full bg-blue-700 text-white py-3 rounded-md hover:bg-blue-800"
+          >
             Save Summary
           </button>
         </section>
